@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarLbsToKgs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_light"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        android:title="Lbs to Kgs"
+        android:titleTextColor="@android:color/white"/>
+
+    <EditText
+        android:id="@+id/edtLbs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbarLbsToKgs"
+        android:hint="Enter LBS"
+        android:inputType="numberDecimal"
+        android:maxLength="4"
+        android:minHeight="48dp" />
+
+    <TextView
+        android:id="@+id/txtKgs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtLbs"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/txtErrorLbs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_red_light"
+        android:visibility="gone"
+        android:layout_below="@id/txtKgs"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/btnSaveLbsToKgs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_below="@id/txtErrorLbs"
+        android:layout_marginTop="16dp"/>
+</RelativeLayout>
